@@ -1,5 +1,5 @@
 /*
- * jQuery NAME Plugin
+ * jQuery PLUGINNAME Plugin
  * version: x.x
  * URL: URL
  * Description: DESCRIPTION
@@ -9,21 +9,26 @@
  */
 
 (function($) {
-  $.fn.PLUGIN = function(settings) {
-    settings = $.extend({
-      PROPERTY: "VALUE"
-    }, settings || {});
+	$.fn.PLUGINNAME = function(settings) {
+		
+		settings = $.extend({
+			PROPERTY: "VALUE"
+		}, settings || {});
 
-    $.fn.PLUGIN.el = $(this); // receiving DOM element
+		return this.each(function() {
 
-    // main plugin functionality
-  };
+			var $this = $(this);
 
-  function privateFunction() {
-    // private function
-  }
+		  	// main plugin functionality
+		
+			function privateFunction() {
+			  // private function
+			}
 
-  $.fn.PLUGIN.FUNCT = function() {
-    // public plugin function
-  }
+		});
+	};
+
+	$.fn.PLUGINNAME.FUNCT = function() {
+	  // public plugin function
+	}
 })(jQuery);
